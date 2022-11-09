@@ -1,0 +1,36 @@
+node js=moteur javascript pour executer du js cote serveur
+npm =package manager / installer et gerer les dependances de package js comme (angular un packet js)
+lors de l installation de nodejs , npm est installer par defaut
+lien nodejs => a executer / lts stable
+cli = accelerer le dev avec angular
+
+qd on s installe le cli il sera installer sur tout le poste
+
+
+node_modules: toutes les dependances du projet
+src: tous les sources du projet
+	app: le code source
+	assets: les assets du projets par example les images du projet
+	environnements: on a les variables d environnement du projet
+	index.html 
+	main.ts
+	
+
+browserslistrc :configurer js par rapport au navigator
+gitignore
+
+angular.json => tres importants , contient la config d angular cli
+package.json => propre a js,les dependances du projet gerer par le package json 
+package-lock => figé les dependances
+
+relatif a typescript
+tsconfig.app.json => configuration du compilateur ts pour angular
+tsconfig.json => configuration du compilateur ts
+
+
+
+selector : balise html qui sera inseré , tout en produisant du code valide 
+pour pouvoir identifiant notre composant dans notre page wb
+template : code html associé a notre composant
+
+export : qui va permettre d expose la class pour la rendre disponible ailleur dans notre code
