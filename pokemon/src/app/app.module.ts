@@ -11,15 +11,21 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { PokemonModule } from './pokemon/pokemon.module';
 import { PokemonService } from './pokemon/pokemon.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataServiceService } from './in-memory-data-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataServiceService,{dataEncapsulation:false}),
+
     PokemonModule,
     AppRoutingModule,
   ],

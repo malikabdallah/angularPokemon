@@ -20,11 +20,21 @@ export class DetailPokemonComponent implements OnInit {
     let id=this.router.snapshot.params['id'];
 
     if(id){
-      this.pokemon=this.service.getPokemonById((Number(id)));
+      this.service.getPokemonById((Number(id))).subscribe(
+        pokemon=>{
+          this.pokemon=pokemon
+        }
+      );
 
-    }else{
-      this.pokemon=undefined;
     }
+  }
+
+  deletePokemon(pokemon:Pokemon){
+    this.service.deletePokemon(pokemon.id).subscribe(
+      res=>{
+        this.goBack();
+      }
+    )
   }
 
   goBack(){
