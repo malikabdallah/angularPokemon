@@ -78,6 +78,19 @@ export class PokemonService {
     )
   }
 
+  searchPokemonList(terme:string):Observable<Pokemon[]>{
+    if(terme.length<=1){
+      return of([]);
+    }
+    return this.http.get<Pokemon[]>(`api/pokemons/?name=${terme}`).pipe(
+      tap((response)=>{
+        console.log("response "+response);
+      }),
+      catchError(error=>this.handleError(error,[]))
+    )
+    
+  }
+
   getPokemonTypesList():string[]{
    
    return [
