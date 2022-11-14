@@ -24,6 +24,8 @@ export class PokemonService {
     );
     //return POKEMONS;
   }
+
+
   getPokemonById(id:number):Observable<Pokemon |undefined>{
     /*
     return POKEMONS.find(pokemon=>pokemon.id == id);

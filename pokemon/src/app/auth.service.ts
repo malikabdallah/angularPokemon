@@ -9,6 +9,10 @@ export class AuthService {
   isLoggedIn:boolean=false;
   redirect:string;
 
+  public isLogger():boolean{
+    return this.isLoggedIn;
+  }
+
   login(name:string,password:string):Observable<boolean>{
     const islogger=(name == 'pikachu' && password=='pikachu');
     return of(this.isLoggedIn).pipe(

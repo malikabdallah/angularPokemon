@@ -7,5 +7,6 @@ import { POKEMONS } from './pokemon/mock-pokemons';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent  {
+  public title="pokedex";
  
 }
